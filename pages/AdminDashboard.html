@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Car | Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Stack Software Developer In Sri Lanka">
+    <meta name="author" content="Pasan Pahasara">
+    <meta name="owner" content="Pasan Pahasara">
+    <link rel="shortcut icon" href="../assets/img/title.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Ubuntu&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/vendor/app.min.css" id="light-style">
+
+    <style>
+        * {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .card-radius {
+            border-radius: 1.5rem;
+        }
+
+        .dash-icon {
+            background: var(--icon-card-bg, var(--columbia-blue));
+            color: var(--icon-card-color, var(--carolina-blue));
+            height: 50px;
+            width: 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            margin-bottom: 20px;
+        }
+
+        .dash-icon ion-icon {
+            font-size: 26px;
+            --ionicon-stroke-width: 45px;
+        }
+
+        .get-start-card .card-icon ion-icon {
+            font-size: 26px;
+            --ionicon-stroke-width: 45px;
+        }
+
+        .icon-1 {
+            --icon-card-bg: #F6D5E6;
+            --icon-card-color: #D23787;
+        }
+
+        .icon-2 {
+            --icon-card-bg: #CEEAFD;
+            --icon-card-color: #6D76E9;
+        }
+
+        .icon-3 {
+            --icon-card-bg: #D5F0E4;
+            --icon-card-color: #29B372;
+        }
+
+        .icon-4 {
+            --icon-card-bg: #E7DEF7;
+            --icon-card-color: #8050D3;
+        }
+
+        .icon-5 {
+            --icon-card-bg: #f1e7c5;
+            --icon-card-color: #e5b61e;
+        }
+    </style>
+</head>
+<body class="loading"
+      data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+<!-- Start Sidebar Wrapper-->
+<section class="wrapper">
+    <!-- Start Sidebar Content-->
+    <div class="leftside-menu">
+        <!-- light logo start -->
+        <a href="#" class="logo text-center logo-light">
+                    <span class="logo-lg mt-lg-4" style="line-height: 0.5rem;position: relative">
+                        <img src="../assets/img/favicon.png" alt="" style="width: 7rem;"><br>
+                        <span style="font-size: 20px; font-weight: bolder; color: #f0f0f0;">EᗩSY</span> car rental</span>
+            <span class="logo-sm">
+                        <img src="../assets/img/favicon.png" alt="" height="17">
+                    </span>
+        </a>
+        <!-- light logo end -->
+
+        <!-- dark logo start -->
+        <!--        <a href="#" class="logo text-center logo-dark">-->
+        <!--                    <span class="logo-lg">-->
+        <!--                        <img src="" alt="" height="16">-->
+        <!--                    </span>-->
+        <!--            <span class="logo-sm">-->
+        <!--                        <img src="" alt="" height="16">-->
+        <!--                    </span>-->
+        <!--        </a>-->
+        <!-- dark logo end -->
+
+        <!-- slideMenu start -->
+        <div class="h-100 pt-lg-1" id="leftside-menu-container" data-simplebar="">
+            <ul class="side-nav">
+
+                <li class="side-nav-title side-nav-item pt-lg-4">Navigation</li>
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#" id="LinkAdminDashboard" aria-expanded="false"
+                       aria-controls="sidebarDashboards" class="side-nav-link">
+                        <i class="uil uil-estate"></i>
+                        <span> Dashboards </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkManageCar" class="side-nav-link">
+                        <i class="uil-car"></i>
+                        <span> Manage Car </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkManageDriver" class="side-nav-link">
+                        <i class="uil-user-plus"></i>
+                        <span> Manage Driver </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkManageCustomer" class="side-nav-link">
+                        <i class="uil-users-alt"></i>
+                        <span> Manage Customer </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkUserRequest" class="side-nav-link">
+                        <i class="uil-repeat"></i>
+                        <span> Rental Returns </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkRentDetails" class="side-nav-link">
+                        <i class="uil-list-ui-alt"></i>
+                        <span> Rent Details </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkPaymentDetails" class="side-nav-link">
+                        <i class="uil uil-credit-card"></i>
+                        <span> Payment Details </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="#" id="LinkIncomeReport" class="side-nav-link">
+                        <i class="uil-analysis"></i>
+                        <span> Income Report </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="logIn.html" class="side-nav-link">
+                        <i class="uil-sign-out-alt"></i>
+                        <span> Sign Out </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <!-- slideMenu end -->
+    </div>
+    <!-- End Sidebar Content-->
+
+    </section>
+    </body>
+    </html>
