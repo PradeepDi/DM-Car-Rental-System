@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Easy Car | Admin Dashboard</title>
+    <title>DM Car | Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full Stack Software Developer In Sri Lanka">
     <meta name="author" content="Pasan Pahasara">
@@ -180,6 +180,292 @@
         <!-- slideMenu end -->
     </div>
     <!-- End Sidebar Content-->
+
+    <!-- Start Page Content here -->
+    <div class="content-page">
+        <!-- start content-->
+        <div class="content">
+            <!-- Start TopBar -->
+            <div class="navbar-custom">
+                <!-- start settings -->
+                <ul class="list-unstyled topbar-menu float-end mb-0">
+                    <li class="dropdown notification-list d-lg-none">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <i class="uil uil-search noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
+                            <form class="p-3">
+                                <input type="text" class="form-control" placeholder="Search ..."
+                                       aria-label="Customer's name">
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="notification-list">
+                        <a class="nav-link end-bar-toggle" href="javascript: void(0);">
+                            <i class="dripicons-gear noti-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- end settings -->
+
+                <!-- start leftSide -->
+                <button class="button-menu-mobile open-left">
+                    <i class="uil-align-left"></i>
+                </button>
+                <!-- end leftSide -->
+
+                <!-- start searchBar -->
+                <div class="app-search dropdown d-none d-lg-block">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control dropdown-toggle" placeholder="Search..."
+                                   id="top-search">
+                            <span class="uil uil-search search-icon"></span>
+                            <button class="input-group-text btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- end searchBar -->
+
+            </div>
+            <!-- End TopBar -->
+
+            <!-- Start Dashboard Content-->
+            <div class="container-fluid" id="adminDashboard">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li><a href="javascript: void(0);">DM Car Rental</a></li>
+                                    <li class="uil uil-angle-right active">Dashboard</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <h1 id="time" class="d-flex justify-content-center" style="font-size: 2.5rem;"></h1>
+                <script>
+                    function updateTime() {
+                        var now = new Date();
+                        var hours = now.getHours();
+                        var minutes = now.getMinutes();
+                        var seconds = now.getSeconds();
+                        var ampm = hours >= 12 ? 'PM' : 'AM'; // get AM/PM indicator
+                        hours = hours % 12; // convert to 12-hour format
+                        hours = hours ? hours : 12; // handle midnight (0 hours)
+                        var timeString = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0") + " " + ampm;
+                        document.getElementById("time").textContent = timeString;
+                    }
+
+                    setInterval(updateTime, 1000);
+                </script>
+
+                <!-- start content -->
+                <div class="row mt-xl-5">
+                    <!-- start col -->
+                    <div class="col-12">
+                        <!-- start row -->
+                        <div class="row">
+                            <!-- start col -->
+                            <div class="col-xl-12">
+
+                                <!-- start first card set -->
+                                <div class="row">
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-2">
+                                                    <ion-icon name="person-add-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Number of Users">Registered
+                                                    Users</h5>
+                                                <h1 class="mt-2 mb-2" id="numberOfUsers">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-3">
+                                                    <ion-icon name="clipboard-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Number of Bookings">Daily
+                                                    Bookings</h5>
+                                                <h1 class="mt-2 mb-2" id="numberOfBookings">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-4">
+                                                    <ion-icon name="car-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Available Cars">Available
+                                                    Cars</h5>
+                                                <h1 class="mt-2 mb-2" id="availableCars">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-1">
+                                                    <ion-icon name="stopwatch-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Reserved Cars">Reserved
+                                                    Cars</h5>
+                                                <h1 class="mt-2 mb-2" id="reservedCars">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end first card set -->
+
+                                <!-- start second card set -->
+                                <div class="row">
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-3">
+                                                    <ion-icon name="checkbox-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Bookings Active">Bookings
+                                                    Active</h5>
+                                                <h1 class="mt-2 mb-2" id="activeBookings">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div> <!-- end card-body-->
+                                        </div> <!-- end card-->
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-4">
+                                                    <ion-icon name="person-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Available Drivers">
+                                                    Available Drivers</h5>
+                                                <h1 class="mt-2 mb-2" id="availableDrivers">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div> <!-- end card-body-->
+                                        </div> <!-- end card-->
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-5">
+                                                    <ion-icon name="car-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Maintenance Cars">
+                                                    Maintenance Cars</h5>
+                                                <h1 class="mt-2 mb-2" id="maintenanceCars">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div> <!-- end card-body-->
+                                        </div> <!-- end card-->
+                                    </div>
+                                    <div class="col-lg-6 col-xl-3">
+                                        <div class="card widget-flat card-radius">
+                                            <div class="card-body pb-1">
+                                                <div class="dash-icon float-end icon-1">
+                                                    <ion-icon name="cog-outline"></ion-icon>
+                                                </div>
+                                                <h5 class="text-muted fw-bolder mt-0" title="Under Maintenance Cars">
+                                                    Under Maintenance</h5>
+                                                <h1 class="mt-2 mb-2" id="underMaintenanceCars">0</h1>
+                                                <hr class="mb-1">
+                                                <p class="mb-0 text-muted text-center">
+                                                    <script>document.write((new Date().getMonth() + 1).toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getDate().toString().padStart(2, "0"))</script>
+                                                    -
+                                                    <script>document.write(new Date().getFullYear())</script>
+                                                    <span class="text-nowrap text-success fw-semibold">  Today</span>
+                                                </p>
+                                            </div> <!-- end card-body-->
+                                        </div> <!-- end card-->
+                                    </div>
+                                </div>
+                                <!-- end second card set -->
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end content -->
+
+            </div>
+            <!-- End Dashboard Content -->
 
     </section>
     </body>
