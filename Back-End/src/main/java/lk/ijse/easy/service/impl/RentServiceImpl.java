@@ -25,12 +25,7 @@ import static lk.ijse.easy.enums.Availability.UNAVAILABLE;
 import static lk.ijse.easy.enums.RentRequestType.CONFORM;
 import static lk.ijse.easy.enums.RentRequestType.REJECT;
 
-/**
- * @author : ShEnUx
- * @time : 11:54 PM
- * @date : 2/23/2023
- * @since : 0.1.0
- **/
+
 @Service
 @Transactional
 public class RentServiceImpl implements RentService {
