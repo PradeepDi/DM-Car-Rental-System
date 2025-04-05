@@ -1,7 +1,3 @@
-/**
- * @author : Pasan Pahasara
- * @since : 0.1.0
- **/
 
 let loginBaseUrl = "http://localhost:8080/Back_End_war/";
 <!-- Start LogIn Section -->
