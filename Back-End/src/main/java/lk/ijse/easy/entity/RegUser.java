@@ -7,12 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-/**
- * @author : ShEnUx
- * @time : 3:09 PM
- * @date : 2/13/2023
- * @since : 0.1.0
- **/
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
