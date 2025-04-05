@@ -11,12 +11,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-/**
- * @author : ShEnUx
- * @time : 7:58 PM
- * @date : 2/18/2023
- * @since : 0.1.0
- **/
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
