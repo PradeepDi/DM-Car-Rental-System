@@ -7,12 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
 
-/**
- * @author : ShEnUx
- * @time : 3:17 PM
- * @date : 2/13/2023
- * @since : 0.1.0
- **/
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

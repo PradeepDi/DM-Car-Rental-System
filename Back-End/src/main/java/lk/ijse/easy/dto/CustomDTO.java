@@ -5,12 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-/**
- * @author : ShEnUx
- * @time : 3:30 PM
- * @date : 2/25/2023
- * @since : 0.1.0
- **/
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
