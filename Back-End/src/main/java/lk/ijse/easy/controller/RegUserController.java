@@ -12,12 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import static lk.ijse.easy.enums.RoleType.REGISTERED_USER;
 
-/**
- * @author : ShEnUx
- * @time : 3:07 PM
- * @date : 2/13/2023
- * @since : 0.1.0
- **/
+
 @RestController
 @CrossOrigin
 @RequestMapping("/customer")
