@@ -18,12 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-/**
- * @author : ShEnUx
- * @time : 3:04 PM
- * @date : 2/13/2023
- * @since : 0.1.0
- **/
+
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = {"lk.ijse.easy.repo"})

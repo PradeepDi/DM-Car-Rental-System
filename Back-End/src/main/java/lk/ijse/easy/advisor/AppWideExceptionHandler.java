@@ -7,12 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-/**
- * @author : ShEnUx
- * @time : 4:45 PM
- * @date : 2/13/2023
- * @since : 0.1.0
- **/
+
 @RestControllerAdvice
 @CrossOrigin
 public class AppWideExceptionHandler {
