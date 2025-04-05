@@ -7,12 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author : ShEnUx
- * @time : 10:41 AM
- * @date : 2/14/2023
- * @since : 0.1.0
- **/
+
 public interface CarRepo extends JpaRepository<Car,String> {
     @Query(value = "SELECT * FROM Car WHERE type =?1 and fuel_Type=?2 and car_Availability='AVAILABLE' ", nativeQuery = true)
     ArrayList<Car> filterCar(String type, String fuel_Type);

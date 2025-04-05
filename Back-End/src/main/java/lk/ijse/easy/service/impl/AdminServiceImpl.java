@@ -1,11 +1,6 @@
 package lk.ijse.easy.service.impl;
 
-/**
- * @author : ShEnUx
- * @time : 9:24 AM
- * @date : 2/14/2023
- * @since : 0.1.0
- **/
+
 
 import lk.ijse.easy.dto.AdminDTO;
 import lk.ijse.easy.entity.Admin;
